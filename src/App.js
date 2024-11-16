@@ -7,6 +7,7 @@ import Section from "./Section";
 
 let tasks = [
   { id: 1, content: "umyć samochód", done: false },
+  { id: 2, content: "zrobić zakupy", done: false },
 ];
 
 let hideDoneTask = false;
