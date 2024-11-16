@@ -11,7 +11,7 @@ Below is the presentation, link to the application and the technologies used.
 
 
 ## Demo
-https://am97veb.github.io/Tasks-list/
+https://am97veb.github.io/todos-list-react/
 
 
 ## Technologies
