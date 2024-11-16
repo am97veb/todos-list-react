@@ -7,7 +7,7 @@ There are also two additional buttons - the first shows the completed task and t
 Below is the presentation, link to the application and the technologies used.
 
 
-![App presentation](src/TaskListGif.gif)
+![App presentation](TaskListGif.gif)
 
 
 ## Demo
