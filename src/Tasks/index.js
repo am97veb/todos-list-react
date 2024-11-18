@@ -9,7 +9,6 @@ const Tasks = ({ tasks, hideDoneTask }) => (
         <button className="listButton--remove">🗑</button>
       </li>
     ))}
-
   </ul >
 )
 
