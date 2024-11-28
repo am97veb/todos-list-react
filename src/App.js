@@ -43,15 +43,17 @@ function App() {
     ({
       ...task,
       done: true
-    })
-    ))
+    }),
+    ));
   };
 
   const addTask = (newTask) => {
     setTask(tasks => [
       ...tasks,
-      { content: newTask, done: false, id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1 }
-    ])
+      { content: newTask, 
+        done: false, 
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1 },
+    ]);
   };
 
   return (
@@ -74,7 +76,6 @@ function App() {
           hideDoneTask={hideDoneTask}
           toggleDone={toggleDone}
           removeTask={removeTask}
-          addTask={addTask}
         />}
         extraHeaderButtons={<Buttons
           tasks={tasks}
