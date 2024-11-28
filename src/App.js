@@ -24,7 +24,10 @@ function App() {
   const toggleDone = (id) => {
     setTask(tasks => tasks.map(task => {
       if (task.id === id) {
-        return { ...task, done: !task.done };
+        return {
+          ...task,
+          done: !task.done
+        };
       }
 
       return task;
@@ -44,6 +47,13 @@ function App() {
     ))
   };
 
+  const addTask = (newTask) => {
+    setTask(tasks => [
+      ...tasks,
+      { content: newTask, done: false, id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1 }
+    ])
+  };
+
   return (
     <Container>
       <Header
@@ -52,7 +62,9 @@ function App() {
 
       <Section
         title="Dodaj nowe zadanie"
-        sectionBody={<Form />}
+        sectionBody={<Form
+          addTask={addTask}
+        />}
       />
 
       <Section
@@ -62,6 +74,7 @@ function App() {
           hideDoneTask={hideDoneTask}
           toggleDone={toggleDone}
           removeTask={removeTask}
+          addTask={addTask}
         />}
         extraHeaderButtons={<Buttons
           tasks={tasks}
