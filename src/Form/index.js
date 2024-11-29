@@ -16,7 +16,7 @@ const Form = ({ addTask }) => {
       className="form">
       <input
         value={newTask}
-        className="form__newTask" 
+        className="form__newTask"
         placeholder="Co jest do zrobienia?"
         onChange={(event) => setTask(event.target.value)} />
       <button

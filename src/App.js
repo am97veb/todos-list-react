@@ -15,7 +15,7 @@ function App() {
 
   const toggleHideDoneTask = () => {
     if (someTaskDone(tasks)) {
-      setHideDoneTask(hideDoneTask => !hideDoneTask)
+      setHideDoneTask(hideDoneTask => !hideDoneTask);
     };
   };
 
@@ -28,14 +28,14 @@ function App() {
           ...task,
           done: !task.done
         };
-      }
+      };
 
       return task;
     }));
   };
 
   const removeTask = (id) => {
-    setTask(tasks => tasks.filter(task => task.id !== id))
+    setTask(tasks => tasks.filter(task => task.id !== id));
   };
 
   const doneAll = () => {
@@ -48,12 +48,16 @@ function App() {
   };
 
   const addTask = (newTask) => {
-    setTask(tasks => [
-      ...tasks,
-      { content: newTask, 
-        done: false, 
-        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1 },
-    ]);
+    if (newTask !== "") {
+      return (setTask(tasks => [
+        ...tasks,
+        {
+          content: newTask,
+          done: false,
+          id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1
+        },
+      ]));
+    };
   };
 
   return (
