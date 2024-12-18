@@ -20,14 +20,13 @@ function App() {
   });
 
 
-
-  const localStorage = () => {
-    if (tasks.length > 0) {
+  const defaultTasksToggle = () => {
+    if (tasks !== null) {
       setTask(defaultTasks === JSON.parse(localStorage.getItem("tasksList")))
     }
   };
 
-  localStorage();
+  defaultTasksToggle();
 
 
 
