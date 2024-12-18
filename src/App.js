@@ -4,7 +4,7 @@ import Tasks from "./Tasks";
 import Header from "./Header";
 import Buttons from "./Buttons";
 import Section from "./Section";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const defaultTasks = [
@@ -14,6 +14,23 @@ function App() {
 
   const [hideDoneTask, setHideDoneTask] = useState(false);
   const [tasks, setTask] = useState(defaultTasks);
+
+  useEffect(() => {
+    localStorage.setItem("tasksList", JSON.stringify(tasks));
+  });
+
+
+
+  const localStorage = () => {
+    if (tasks.length > 0) {
+      setTask(defaultTasks === JSON.parse(localStorage.getItem("tasksList")))
+    }
+  };
+
+  localStorage();
+
+
+
 
   const toggleHideDoneTask = () => {
     if (someTaskDone(tasks)) {
