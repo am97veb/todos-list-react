@@ -7,29 +7,23 @@ import Section from "./Section";
 import { useState, useEffect } from "react";
 
 function App() {
-  const defaultTasks = [
-    { id: 1, content: "umyć samochód", done: false },
-    { id: 2, content: "zrobić zakupy", done: true },
-  ];
+  const defaultTasks = [];
+
+  const lokalStorageTask = () => {
+    const lokalStorageReading = JSON.parse(localStorage.getItem("tasksList"))
+    if (lokalStorageReading === null) {
+      return defaultTasks;
+    }
+
+    return JSON.parse(localStorage.getItem("tasksList"));
+  };
 
   const [hideDoneTask, setHideDoneTask] = useState(false);
-  const [tasks, setTask] = useState(defaultTasks);
+  const [tasks, setTask] = useState(lokalStorageTask);
 
   useEffect(() => {
     localStorage.setItem("tasksList", JSON.stringify(tasks));
   });
-
-
-  const defaultTasksToggle = () => {
-    if (tasks !== null) {
-      setTask(defaultTasks === JSON.parse(localStorage.getItem("tasksList")))
-    }
-  };
-
-  defaultTasksToggle();
-
-
-
 
   const toggleHideDoneTask = () => {
     if (someTaskDone(tasks)) {
