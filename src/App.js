@@ -5,10 +5,9 @@ import Header from "./Header";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import { useState, useEffect } from "react";
+import { defaultTasks } from "./DefaultTasks";
 
 function App() {
-  const defaultTasks = [];
-
   const lokalStorageTask = () => {
     const lokalStorageReading = JSON.parse(localStorage.getItem("tasksList"))
     if (lokalStorageReading === null) {
