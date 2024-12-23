@@ -1,12 +1,14 @@
-import "./style.css";
+import { SectionContainer, SectionHeader } from "./styled";
 
 const Section = ({ title, sectionBody, extraHeaderButtons }) => (
 
-  <section className="section">
-    <div className="section__container">
-      <h2 className="section__header">{title}</h2>
+  <section>
+    <SectionContainer>
+      <SectionHeader>
+        {title}
+      </SectionHeader>
       {extraHeaderButtons}
-    </div>
+    </SectionContainer>
     {sectionBody}
   </section>
 );
