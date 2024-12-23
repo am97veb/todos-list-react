@@ -1,5 +1,5 @@
-import { defaultTasks } from "./DefaultTasks";
 import { useState, useEffect } from "react";
+import { defaultTasks } from "./defaultTasks";
 
  const useTasks = () => {
     const lokalStorageTask = () => {

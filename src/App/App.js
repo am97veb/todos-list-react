@@ -1,9 +1,9 @@
-import Container from "./Container";
-import Form from "./Form";
-import Tasks from "./Tasks";
-import Header from "./Header";
-import Buttons from "./Buttons";
-import Section from "./Section";
+import Container from "../Container";
+import Form from "../Form";
+import Tasks from "../Tasks";
+import Header from "../Header";
+import Buttons from "../Buttons";
+import Section from "../Section";
 import useTasks from "./useTasks";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
