@@ -1,4 +1,5 @@
 import styled from "styled-components";
+// import { Theme } from "Theme";
 
 export const ButtonsForAllTasks = styled.div`
     display: grid;
@@ -6,26 +7,26 @@ export const ButtonsForAllTasks = styled.div`
     grid-gap: 20px;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         grid-template-columns: 1fr;
         padding: 10px 0;
     }
 `;
 
 export const DoneTasksHidden = styled.button`
-    color: rgb(0, 160, 160);
+    color: ${({ theme }) => theme.colors.persianGreen};
     transition: 0.5s;
     border: none;
     background-color: white;
 
     &:hover {
-        color: hsl(180, 100%, 36%);
+        color:${({ theme }) => theme.colors.robinsEggBlue};
     }
 `;
 
 export const AllTasksDone = styled(DoneTasksHidden)`
     &:disabled {
-    color: rgba(194, 194, 194, 0.692);
+    color: ${({ theme }) => theme.colors.silver};
     transition: none;
 }
 `

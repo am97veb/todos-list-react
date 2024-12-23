@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const TasksList = styled.ul`
     max-width: 1500px;
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.white};
     width: 100%;
     padding: 40px 0 20px 0;
     margin-top: 2px;
@@ -15,7 +15,8 @@ export const ListItem = styled.li`
     justify-items: center;
     margin: 0 10px;
     list-style: none;
-    border-bottom: solid 1px #dddada;
+    border-bottom: solid 1px;
+    border-color: ${({ theme }) => theme.colors.alto};
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -25,26 +26,27 @@ export const ListItem = styled.li`
 export const ListButton = styled.button`
     width: 30px;
     height: 30px;
-    color: white;
-    background-color: rgb(55, 196, 0);
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({theme})=> theme.colors.harlequin};
     transition: 0.5s;
     border: none;
     text-decoration: none;
 
     &:hover {
-        background-color: rgb(62, 219, 0);
+        background-color:${({theme})=> theme.colors.heppyHarlequin};
     }
 
     &:active {
-        border: solid 2px black;
+        border: solid 2px;
+        border-color: ${({theme})=> theme.colors.black};
     }
 
     ${({ remove }) => remove && css`
         color: rgb(240, 239, 239);
-        background-color: rgb(255, 34, 34);
+        background-color: ${({theme})=> theme.colors.torchRed};
 
         &:hover {
-        background-color: rgb(255, 71, 71);
+        background-color: ${({theme})=> theme.colors.sunsetOrange};
         }
     `}
 `;
