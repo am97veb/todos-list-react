@@ -27,26 +27,26 @@ export const ListButton = styled.button`
     width: 30px;
     height: 30px;
     color: ${({ theme }) => theme.colors.white};
-    background-color: ${({theme})=> theme.colors.harlequin};
+    background-color: ${({ theme }) => theme.colors.harlequin};
     transition: 0.5s;
     border: none;
     text-decoration: none;
 
     &:hover {
-        background-color:${({theme})=> theme.colors.heppyHarlequin};
+        background-color:${({ theme }) => theme.colors.heppyHarlequin};
     }
 
     &:active {
         border: solid 2px;
-        border-color: ${({theme})=> theme.colors.black};
+        border-color: ${({ theme }) => theme.colors.black};
     }
 
     ${({ remove }) => remove && css`
         color: rgb(240, 239, 239);
-        background-color: ${({theme})=> theme.colors.torchRed};
+        background-color: ${({ theme }) => theme.colors.torchRed};
 
         &:hover {
-        background-color: ${({theme})=> theme.colors.sunsetOrange};
+        background-color: ${({ theme }) => theme.colors.sunsetOrange};
         }
     `}
 `;

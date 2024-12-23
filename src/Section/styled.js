@@ -18,7 +18,7 @@ export const SectionContainer = styled.div`
 
 export const SectionHeader = styled.h2`
     max-width: 1500px;
-    background-color: ${({theme})=> theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     width: 100%;
     padding: 20px;
     margin: 0px 0px 2px;

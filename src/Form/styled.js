@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form`
     max-width: 1500px;
-    background-color: ${({theme})=> theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.white};
     width: 100%;
     padding: 10px;
     display: grid;
@@ -22,7 +22,7 @@ export const FormNewTask = styled.input`
 `;
 
 export const FormButton = styled.button`
-    color: ${({theme})=> theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     background-color: ${({ theme }) => theme.colors.persianGreen};
     transition: 0.5s;
     border: none;

@@ -16,17 +16,17 @@ const Tasks = ({ tasks, hideDoneTask, toggleDone, removeTask }) => (
           {task.done ? "✔" : ""}
         </ListButton>
 
-        <Content 
-        done={task.done}
-        > 
-        {task.content} 
+        <Content
+          done={task.done}
+        >
+          {task.content}
         </Content>
 
         <ListButton
           remove
           onClick={() => removeTask(task.id)}
-          >
-            🗑
+        >
+          🗑
         </ListButton>
 
       </ListItem>

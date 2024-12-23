@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { defaultTasks } from "./defaultTasks";
 
- const useTasks = () => {
+const useTasks = () => {
     const lokalStorageTask = () => {
         const lokalStorageReading = JSON.parse(localStorage.getItem("tasksList"))
         if (lokalStorageReading === null) {
@@ -64,7 +64,7 @@ import { defaultTasks } from "./defaultTasks";
         removeTask,
         doneAll,
         addTask,
-      }
+    }
 };
 
 export default useTasks;
