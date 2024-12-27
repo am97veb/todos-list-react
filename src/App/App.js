@@ -8,7 +8,7 @@ import useTasks from "./useTasks";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-import { GlobalStyle } from "../GlobalStyle/globalStyle";
+import { GlobalStyle } from "./globalStyle";
 
 function App() {
   const [hideDoneTask, setHideDoneTask] = useState(false);
