@@ -17,13 +17,13 @@ const Tasks = ({ tasks, hideDoneTask, toggleDone, removeTask }) => (
         </ListButton>
 
         <Content
-          done={task.done}
+          $done={task.done}
         >
           {task.content}
         </Content>
 
         <ListButton
-          remove
+          $remove
           onClick={() => removeTask(task.id)}
         >
           🗑

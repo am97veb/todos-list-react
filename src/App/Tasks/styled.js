@@ -41,7 +41,7 @@ export const ListButton = styled.button`
         border-color: ${({ theme }) => theme.colors.black};
     }
 
-    ${({ remove }) => remove && css`
+    ${({ $remove }) => $remove && css`
         color: rgb(240, 239, 239);
         background-color: ${({ theme }) => theme.colors.torchRed};
 
@@ -55,7 +55,7 @@ export const Content = styled.p`
         display: grid;
         justify-self: start;
 
-        ${({ done }) => done && css`
+        ${({ $done }) => $done && css`
             text-decoration: line-through;
         `}
 `;
