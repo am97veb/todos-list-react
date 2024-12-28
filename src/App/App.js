@@ -1,4 +1,4 @@
-import Container from "./Container";
+import { Container } from "./Container";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Header from "./Header";
@@ -32,33 +32,33 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
-          <Header
-            title="Lista zadań"
-          />
+        <Header
+          title="Lista zadań"
+        />
 
-          <Section
-            title="Dodaj nowe zadanie"
-            sectionBody={<Form
-              addTask={addTask}
-            />}
-          />
+        <Section
+          title="Dodaj nowe zadanie"
+          sectionBody={<Form
+            addTask={addTask}
+          />}
+        />
 
-          <Section
-            title="Lista zadań"
-            sectionBody={<Tasks
-              tasks={tasks}
-              hideDoneTask={hideDoneTask}
-              toggleDone={toggleDone}
-              removeTask={removeTask}
-            />}
-            extraHeaderButtons={<Buttons
-              tasks={tasks}
-              hideDoneTask={hideDoneTask}
-              someTaskDone={someTaskDone}
-              toggleHideDoneTask={toggleHideDoneTask}
-              doneAll={doneAll}
-            />}
-          />
+        <Section
+          title="Lista zadań"
+          sectionBody={<Tasks
+            tasks={tasks}
+            hideDoneTask={hideDoneTask}
+            toggleDone={toggleDone}
+            removeTask={removeTask}
+          />}
+          extraHeaderButtons={<Buttons
+            tasks={tasks}
+            hideDoneTask={hideDoneTask}
+            someTaskDone={someTaskDone}
+            toggleHideDoneTask={toggleHideDoneTask}
+            doneAll={doneAll}
+          />}
+        />
       </Container>
     </ThemeProvider>
   );
