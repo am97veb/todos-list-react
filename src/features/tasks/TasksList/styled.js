@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const TasksList = styled.ul`
+export const List = styled.ul`
     max-width: 1500px;
     background-color: ${({ theme }) => theme.colors.white};
     width: 100%;

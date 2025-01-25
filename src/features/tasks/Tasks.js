@@ -1,16 +1,15 @@
-import { Container } from "./Container";
+import { Container } from "../../common/Container";
 import Form from "./Form";
-import Tasks from "./Tasks";
-import Header from "./Header";
+import TasksList from "./TasksList";
+import Header from "../../common/Header";
 import Buttons from "./Buttons";
-import Section from "./Section";
-import useTasks from "./useTasks";
+import Section from "../../common/Section";
+import useTasks from "../../useTasks";
 import { useState } from "react";
-import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
-import { GlobalStyle } from "./globalStyle";
 
-function App() {
+
+
+function Tasks() {
   const [hideDoneTask, setHideDoneTask] = useState(false);
 
   const toggleHideDoneTask = () => {
@@ -29,8 +28,6 @@ function App() {
   } = useTasks();
 
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
       <Container>
         <Header
           title="Lista zadań"
@@ -45,7 +42,7 @@ function App() {
 
         <Section
           title="Lista zadań"
-          sectionBody={<Tasks
+          sectionBody={<TasksList
             tasks={tasks}
             hideDoneTask={hideDoneTask}
             toggleDone={toggleDone}
@@ -60,8 +57,7 @@ function App() {
           />}
         />
       </Container>
-    </ThemeProvider>
   );
 }
 
-export default App;
+export default Tasks;
