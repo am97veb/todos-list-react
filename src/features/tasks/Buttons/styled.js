@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import { Theme } from "Theme";
 
 export const ButtonsForAllTasks = styled.div`
     display: grid;
