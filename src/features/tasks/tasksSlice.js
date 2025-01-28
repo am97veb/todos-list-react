@@ -1,37 +1,39 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { defaultTasks } from "../../defaultTasks";
 
 const tasksSlice = createSlice({
     name: "tasks",
     initialState: {
-        tasks: [
-            { content: "zrobić obiad", done: true, id: 1 },
-            { content: "umyć samochód", done: false, id: 2 },
-        ],
+        tasks: defaultTasks,
         hideDone: false,
     },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
-            tasks.push(payload);
+            tasks.push(task);
         },
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
-        toggleDone: ({ tasks }, { payload }) => {
-            const index = tasks.findIndex(task => task.id === payload);
+        toggleDone: ({ tasks }, { id }) => {
+            const index = tasks.findIndex(task => task.id === id);
             tasks[index].done = !tasks[index].done;
         },
         allTasksDone: ({ tasks }) => {
             for (const task of tasks) {
-                task.done = true
+                task.done = true;
             };
         },
-        removeTask: ({ tasks }, action) => {
-            const index = tasks.findIndex(task => task.id === action.payload);
+        removeTask: ({ tasks }, { id }) => {
+            const index = tasks.findIndex(task => task.id === id);
             tasks.splice(tasks[index], 1);
         },
     },
 });
 
 export const { addTask, toggleHideDone, toggleDone, allTasksDone, removeTask } = tasksSlice.actions;
-export const selectTasks = state => state.tasks;
+export const selectTasksState = state => state.tasks;
+export const selectEveryTaskDone = state =>
+    selectTasksState(state).tasks.every(({ done }) => done);
+export const selectSomeTaskDone = state =>
+    selectTasksState(state).tasks.some(({ done }) => done);
 export default tasksSlice.reducer;
