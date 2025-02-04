@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     persianGreen: "rgb(0, 160, 160)",
     robinsEggBlue: "rgb(0, 184, 184)",
+    gray:"rgb(137, 137, 137)",
     silver: "rgb(194, 194, 194)",
     alto: "rgb(221, 218, 218)",
     white: "rgb(255, 255, 255)",

@@ -18,9 +18,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #dddada;
+    background-color: ${({ theme }) => theme.colors.alto} ;
     font-family: "Montserrat", sans-serif;
     word-break: break-word;
   }
 `;
-

@@ -1,16 +1,13 @@
-import { SectionContainer, SectionHeader } from "./styled";
+import { Wrapper, SectionContainer, SectionHeader, SectionBody } from "./styled";
 
 const Section = ({ title, sectionBody, extraHeaderButtons }) => (
-
-  <section>
+  <Wrapper>
     <SectionContainer>
-      <SectionHeader>
-        {title}
-      </SectionHeader>
+      <SectionHeader>{title}</SectionHeader>
       {extraHeaderButtons}
     </SectionContainer>
-    {sectionBody}
-  </section>
+    <SectionBody>{sectionBody}</SectionBody>
+  </Wrapper>
 );
 
 export default Section;

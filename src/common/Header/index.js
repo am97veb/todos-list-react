@@ -1,11 +1,7 @@
-import { AppTitle } from "./styled";
-
 const Header = ({ title }) => (
   <header>
-    <AppTitle>
-      {title}
-    </AppTitle>
+    <h1>{title}</h1>
   </header>
-)
+);
 
 export default Header;

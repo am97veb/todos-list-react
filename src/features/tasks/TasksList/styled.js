@@ -1,11 +1,8 @@
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
-    max-width: 1500px;
-    background-color: ${({ theme }) => theme.colors.white};
-    width: 100%;
-    padding: 40px 0 20px 0;
-    margin-top: 2px;
+    padding: 0px;
+    margin: 0px;
 `;
 
 export const ListItem = styled.li`
@@ -13,7 +10,6 @@ export const ListItem = styled.li`
     grid-template-columns: 50px 1fr 50px;
     align-items: center;
     justify-items: center;
-    margin: 0 10px;
     list-style: none;
     border-bottom: solid 1px;
     border-color: ${({ theme }) => theme.colors.alto};
