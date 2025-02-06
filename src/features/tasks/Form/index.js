@@ -1,8 +1,9 @@
 import { useState, useRef } from "react";
-import { StyledForm, FormNewTask, FormButton } from "./styled";
+import { StyledForm, FormButton } from "./styled";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { addTask } from "../tasksSlice";
+import { Input } from "../Input";
 
 const Form = () => {
   const [newTask, setTask] = useState("");
@@ -14,13 +15,12 @@ const Form = () => {
 
     const trimmedNewTask = newTask.trim();
 
-    {trimmedNewTask &&
+    trimmedNewTask &&
       dispatch(addTask({
         content: newTask,
         done: false,
         id: nanoid(),
       }));
-    }
 
     setTask("");
   };
@@ -29,7 +29,7 @@ const Form = () => {
     <StyledForm
       onSubmit={onFormSubmit}
     >
-      <FormNewTask
+      <Input
         ref={focusRef}
         value={newTask}
         placeholder="Co jest do zrobienia?"
