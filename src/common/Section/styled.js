@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.section`
-  max-width: 1500px;
-  background-color: ${({ theme }) => theme.colors.white};
-  width: 100%;
   margin: 10px 0px;
-  box-shadow: 0px 1px 5px -2px ${({theme}) => theme.colors.gray};
+  background-color: ${({ theme }) => theme.colors.white};  
+  box-shadow: 0px 1px 5px -2px ${({ theme }) => theme.colors.gray};
 `;
 
 export const SectionHeader = styled.h2`
@@ -15,6 +13,7 @@ export const SectionHeader = styled.h2`
 
 export const SectionBody = styled.div`
   padding: 20px;
+  text-align:justify;
 `;
 
 export const SectionContainer = styled.div`
