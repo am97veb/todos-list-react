@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ButtonsForAllTasks = styled.div`
+export const ButtonsWrapper = styled.div`
   display: flex;
   padding: 20px;
 
@@ -10,7 +10,7 @@ export const ButtonsForAllTasks = styled.div`
   }
 `;
 
-export const DoneTasksHidden = styled.button`
+export const ExtraHeaderButtons = styled.button`
   color: ${({ theme }) => theme.colors.persianGreen};
   transition: 0.5s;
   border: none;
@@ -24,12 +24,5 @@ export const DoneTasksHidden = styled.button`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     flex-basis: 100%;
     margin: 10px;
-  }
-`;
-
-export const AllTasksDone = styled(DoneTasksHidden)`
-  &:disabled {
-    color: ${({ theme }) => theme.colors.silver};
-    transition: none;
   }
 `;

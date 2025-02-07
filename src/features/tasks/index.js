@@ -2,9 +2,10 @@ import { Container } from "../../common/Container";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Header from "../../common/Header";
-import Buttons from "./Buttons";
+import TasksListButtons from "./TasksListButtons";
 import Section from "../../common/Section";
 import Search from "./Search";
+import ExampleTasksButton from "./ExampleTasksButton";
 
 function Tasks() {
 
@@ -15,6 +16,7 @@ function Tasks() {
       />
       <Section
         title="Dodaj nowe zadanie"
+        extraHeaderButtons={<ExampleTasksButton />}
         sectionBody={<Form />}
       />
 
@@ -26,7 +28,7 @@ function Tasks() {
       <Section
         title="Lista zadań"
         sectionBody={<TasksList />}
-        extraHeaderButtons={<Buttons />}
+        extraHeaderButtons={<TasksListButtons />}
       />
     </Container>
   );
