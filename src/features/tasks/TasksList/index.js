@@ -1,10 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
-import { List, ListItem, ListButton, Content } from "./styled";
+import { List, ListItem, ListButton, Content, StyledLink } from "./styled";
 import { toggleDone, removeTask, selectHideDone, selectTasks } from "../tasksSlice";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { selectSearchTask } from "../tasksSlice";
 
 const TasksList = () => {
-  const tasks = useSelector(selectTasks);
+  const location = useLocation();
+  const searchContent = new URLSearchParams(location.search);
+  const search = searchContent.get("szukaj");
+
+  const tasks = useSelector(state => selectSearchTask(state, search));
   const hideDone = useSelector(selectHideDone);
   const dispatch = useDispatch();
 
@@ -23,11 +28,11 @@ const TasksList = () => {
 
           <Content
             $done={task.done}>
-            <Link
+            <StyledLink
               to={`/zadania/${task.id}`}
             >
               {task.content}
-            </Link>
+            </StyledLink>
           </Content>
 
           <ListButton

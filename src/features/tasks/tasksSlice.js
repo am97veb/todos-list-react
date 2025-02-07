@@ -44,4 +44,21 @@ export const selectEveryTaskDone = (state) =>
 export const selectTaskById = (state, taskDetailsId) =>
   selectTasks(state).find(({ id }) => id === taskDetailsId);
 
+export const selectSearchTask = (state, search) => {
+  const tasks = selectTasks(state);
+
+  if (!search || search.trim() === "") {
+    return tasks;
+  };
+
+  return tasks.filter(({ content }) =>
+    content
+      .toUpperCase()
+      .includes(
+        search
+          .trim()
+          .toUpperCase()
+      ));
+}
+
 export default tasksSlice.reducer;
