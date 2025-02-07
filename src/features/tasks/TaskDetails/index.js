@@ -3,7 +3,7 @@ import { Container } from "../../../common/Container";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import { useSelector } from "react-redux";
-import { selectTaskById, selectTasks } from "../tasksSlice";
+import { selectTaskById } from "../tasksSlice";
 
 const TaskDetails = () => {
   const { id } = useParams();
@@ -15,8 +15,18 @@ const TaskDetails = () => {
         title="Szczegóły zadania"
       />
       <Section
-        title={task.content}
-        sectionBody={<>{task.done}</>} />
+        title={
+          task ? task.content : "Wybacz, nie ma takiego zadania😕"
+        }
+        sectionBody={
+          task &&
+          <>
+            <strong>Ukończono:</strong>
+            {" "}
+            {task.done ? "Tak" : "Nie"}
+          </>
+        }
+      />
     </Container>
   );
 }
