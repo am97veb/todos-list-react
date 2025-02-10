@@ -1,12 +1,17 @@
 [
     {
-      "content": "zrobić obiad",
-      "done": true,
+      "content": "ulepić pierogi",
+      "done": false,
       "id": "1"
     },
     {
-      "content": "umyć samochód",
+      "content": "poskładać meble",
       "done": false,
       "id": "2"
+    },
+    {
+      "content": "pozmywać naczynia",
+      "done": false,
+      "id": "3"
     }
   ]
