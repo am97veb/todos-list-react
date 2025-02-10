@@ -1,13 +1,13 @@
-import { Container } from "../../common/Container";
-import Form from "./Form";
-import TasksList from "./TasksList";
-import Header from "../../common/Header";
-import TasksListButtons from "./TasksListButtons";
-import Section from "../../common/Section";
-import Search from "./Search";
-import ExampleTasksButton from "./ExampleTasksButton";
+import { Container } from "../../../common/Container";
+import Form from "../Form";
+import TasksList from "../TasksList";
+import Header from "../../../common/Header";
+import TasksListButtons from "../TasksListButtons";
+import Section from "../../../common/Section";
+import Search from "../Search";
+import ExampleTasksButton from "../ExampleTasksButton";
 
-function Tasks() {
+function TasksPage() {
 
   return (
     <Container>
@@ -34,4 +34,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;
