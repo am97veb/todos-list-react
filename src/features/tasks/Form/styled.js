@@ -12,7 +12,7 @@ export const StyledForm = styled.form`
 
 export const FormButton = styled.button`
     color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.persianGreen};
+    background-color: ${({ theme }) => theme.colors.surfieGreen};
     transition: 0.5s;
     border: none;
     font-family: "Montserrat", sans-serif;

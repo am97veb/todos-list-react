@@ -58,6 +58,6 @@ export const Content = styled.p`
 `;
 
 export const StyledLink = styled(Link)`
-    color: ${({ theme}) => theme.colors.persianGreen};
+    color: ${({ theme}) => theme.colors.surfieGreen};
     text-decoration: none;
 `;

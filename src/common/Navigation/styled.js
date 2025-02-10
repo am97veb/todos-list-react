@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const NavigationContainer = styled.nav`
-  background-color: ${({ theme }) => theme.colors.persianGreen};
+  background-color: ${({ theme }) => theme.colors.surfieGreen};
   margin-bottom: 40px;
   display: flex;
   justify-content: center;

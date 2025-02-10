@@ -11,7 +11,7 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const ExtraHeaderButtons = styled.button`
-  color: ${({ theme }) => theme.colors.persianGreen};
+  color: ${({ theme }) => theme.colors.surfieGreen};
   transition: 0.5s;
   border: none;
   background-color: transparent;
