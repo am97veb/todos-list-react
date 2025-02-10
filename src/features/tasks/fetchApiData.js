@@ -1,11 +1,7 @@
 import axios from "axios";
+import { sourceApiData } from "./sourceApiData";
 
 export const fetchApiData = async () => {
-    try {
-        const response = await axios.get("todo-list-react/exampleTasks");
-        console.log(response.data);
-    } catch (error) { 
-        console.error ("coś jest nie tak", error);
-    };
-    return await response.json()
-};
+    const response = await axios.get(sourceApiData);
+    return await response.data; 
+}; 
