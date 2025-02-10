@@ -26,3 +26,10 @@ export const ExtraHeaderButtons = styled.button`
     margin: 10px;
   }
 `;
+
+export const ExtraHeaderButtonsDisabled = styled(ExtraHeaderButtons)`
+  &:disabled {
+    color: ${({ theme }) => theme.colors.silver};
+    transition: none;
+  }
+`;
