@@ -1,19 +1,22 @@
-import { useDispatch } from "react-redux";
-import { ButtonsWrapper, ExtraHeaderButtons } from "../ExtraHeaderButtons";
-import { fetchExampleTasks } from "../tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { ButtonsWrapper, ExtraHeaderButtonsDisabled } from "../ExtraHeaderButtons";
+import { fetchExampleTasks, selectFatchDataStatus } from "../tasksSlice";
 
 const ExampleTasksButton = () => {
-  const dispatch = useDispatch();
+    const fetchDataStatus = useSelector(selectFatchDataStatus);
+    const dispatch = useDispatch();
 
-  return (
-    <ButtonsWrapper>
-        <ExtraHeaderButtons
-        onClick={() => dispatch(fetchExampleTasks())}
-        >
-            Pobierz przykładowe zadania
-        </ExtraHeaderButtons>
-    </ButtonsWrapper>
-  )
+
+    return (
+        <ButtonsWrapper>
+            <ExtraHeaderButtonsDisabled
+                onClick={() => dispatch(fetchExampleTasks())}
+                disabled={fetchDataStatus}
+            >
+                {fetchDataStatus ? "Ładowanie" : "Pobierz przykładowe zadania"}
+            </ExtraHeaderButtonsDisabled>
+        </ButtonsWrapper>
+    )
 };
 
 export default ExampleTasksButton;
