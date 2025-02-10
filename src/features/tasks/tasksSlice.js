@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { defaultTasks } from "../../defaultTasks";
+import { getTasksFromLocalStorage } from "./localStorageTasks";
 
 const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
-    tasks: defaultTasks,
+    tasks: getTasksFromLocalStorage(),
     hideDone: false,
+    fetchDataStatus: false,
   },
   reducers: {
     addTask: ({ tasks }, { payload: task }) => {
@@ -27,14 +28,30 @@ const tasksSlice = createSlice({
       const index = tasks.findIndex((task) => task.id === taskId);
       tasks.splice(index, 1);
     },
+    fetchExampleTasks: () => {},
+    podmianaZadan: (state, {payload:przykladoweZadania}) => {
+      state.tasks = przykladoweZadania;
+    },
+    fetchStatusChange: (state) => { 
+      state.fetchDataStatus = !state.fetchDataStatus
+    },
   },
 });
 
-export const { addTask, toggleHideDone, toggleDone, allTasksDone, removeTask } =
-  tasksSlice.actions;
+export const {
+  addTask,
+  toggleHideDone,
+  toggleDone,
+  allTasksDone,
+  removeTask,
+  fetchExampleTasks,
+  podmianaZadan,
+  fetchStatusChange
+} = tasksSlice.actions;
 
 export const selectTasks = (state) => state.tasks.tasks;
 export const selectHideDone = (state) => state.tasks.hideDone;
+export const selectFatchDataStatus = (state) => state.tasks.fetchDataStatus;
 export const selectAreTasksEmpty = (state) => selectTasks(state).length === 0;
 export const selectSomeTaskDone = (state) =>
   selectTasks(state).some(({ done }) => done);
@@ -59,6 +76,6 @@ export const selectSearchTask = (state, search) => {
           .trim()
           .toUpperCase()
       ));
-}
+};
 
 export default tasksSlice.reducer;
