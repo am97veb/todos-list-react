@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { List, ListItem, ListButton, Content, StyledLink } from "./styled";
-import { toggleDone, removeTask, selectHideDone, selectTasks } from "../tasksSlice";
+import { toggleDone, removeTask, selectHideDone } from "../tasksSlice";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { selectSearchTask } from "../tasksSlice";
 
