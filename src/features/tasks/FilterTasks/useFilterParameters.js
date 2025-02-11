@@ -12,7 +12,7 @@ export const useReplaceSearchParameter = () => {
     const location = useLocation();
     const searchContent = new URLSearchParams(location.search);
 
-    const replaceSearchParameter = ({key, value}) => {
+    const replaceSearchParameter = ({ key, value }) => {
         if (value === undefined) {
             searchContent.delete(key);
         } else {

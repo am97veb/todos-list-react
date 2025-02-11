@@ -4,7 +4,6 @@ import TasksPage from "./features/tasks/TasksPage";
 import TaskDetailsPage from "./features/tasks/TaskDetailsPage";
 import AuthorPage from "./features/author/index";
 
-
 const App = () => (
   <HashRouter>
     <Navigation />

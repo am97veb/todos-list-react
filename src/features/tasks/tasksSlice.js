@@ -29,7 +29,7 @@ const tasksSlice = createSlice({
       tasks.splice(index, 1);
     },
     fetchExampleTasks: () => {},
-    podmianaZadan: (state, {payload:przykladoweZadania}) => {
+    switchTasks: (state, {payload:przykladoweZadania}) => {
       state.tasks = przykladoweZadania;
     },
     fetchStatusChange: (state) => { 
@@ -45,7 +45,7 @@ export const {
   allTasksDone,
   removeTask,
   fetchExampleTasks,
-  podmianaZadan,
+  switchTasks,
   fetchStatusChange
 } = tasksSlice.actions;
 

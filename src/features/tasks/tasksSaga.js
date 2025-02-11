@@ -1,8 +1,8 @@
 import { call, put, delay, takeEvery, select } from "redux-saga/effects"
-import { fetchExampleTasks, fetchStatusChange, podmianaZadan as switchTasks } from "./tasksSlice";
+import { fetchExampleTasks, fetchStatusChange, switchTasks } from "./tasksSlice";
 import { fetchApiData } from "./fetchApiData";
-import { saveTasksToLocalStorage} from "./localStorageTasks";
-import {selectTasks} from "./tasksSlice.js";
+import { saveTasksToLocalStorage } from "./localStorageTasks";
+import { selectTasks } from "./tasksSlice.js";
 
 function* fetchExampleTasksHandler() {
     try {
