@@ -14,14 +14,13 @@ function* fetchExampleTasksHandler() {
     } catch (error) {
         yield call(alert, "Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później");
         yield call(console.error("Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później", error));
-
     };
 };
 
 function* tasksFromLocaleStorageHandler() {
     const tasks = yield select(selectTasks);
     yield call(saveTasksToLocalStorage, tasks);
-}
+};
 
 export function* watchFetchExampleTasks() {
     yield takeEvery(fetchExampleTasks.type, fetchExampleTasksHandler);

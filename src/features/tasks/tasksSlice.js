@@ -33,7 +33,7 @@ const tasksSlice = createSlice({
       state.tasks = przykladoweZadania;
     },
     fetchStatusChange: (state) => { 
-      state.fetchDataStatus = !state.fetchDataStatus
+      state.fetchDataStatus = !state.fetchDataStatus;
     },
   },
 });
