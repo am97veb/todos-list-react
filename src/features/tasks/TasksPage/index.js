@@ -4,7 +4,7 @@ import TasksList from "../TasksList";
 import Header from "../../../common/Header";
 import TasksListButtons from "../TasksListButtons";
 import Section from "../../../common/Section";
-import Search from "../Search";
+import FilterTasks from "../FilterTasks";
 import ExampleTasksButton from "../ExampleTasksButton";
 
 function TasksPage() {
@@ -22,7 +22,7 @@ function TasksPage() {
 
       <Section
         title="Wyszukiwarka"
-        sectionBody={<Search />}
+        sectionBody={<FilterTasks />}
       />
 
       <Section
