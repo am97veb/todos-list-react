@@ -4,9 +4,6 @@ import { fetchApiData } from "./fetchApiData";
 import { saveTasksToLocalStorage} from "./localStorageTasks";
 import {selectTasks} from "./tasksSlice.js";
 
-
-
-
 function* fetchExampleTasksHandler() {
     try {
         yield put(fetchStatusChange());

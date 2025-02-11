@@ -6,14 +6,13 @@ const ExampleTasksButton = () => {
     const fetchDataStatus = useSelector(selectFatchDataStatus);
     const dispatch = useDispatch();
 
-
     return (
         <ButtonsWrapper>
             <ExtraHeaderButtonsDisabled
                 onClick={() => dispatch(fetchExampleTasks())}
                 disabled={fetchDataStatus}
             >
-                {fetchDataStatus ? "Ładowanie" : "Pobierz przykładowe zadania"}
+                {fetchDataStatus ? "Ładowanie..." : "Pobierz przykładowe zadania"}
             </ExtraHeaderButtonsDisabled>
         </ButtonsWrapper>
     )
