@@ -11,7 +11,12 @@ const AuthorPage = () => (
       title="Adrian Markefka"
       sectionBody={
         <>
-          Nazywam się Adrian Markefka i mam 26 lat. Pochodzę ze Świerklańca, a obecnie mieszkam w Piekarach Śląskich (woj. Śląskie). Jestem absolwentem AWF Katowice, gdzie ukończyłem studia licencjckie z Bezpieczeństwa Wewnętrznego i studia magisterskie z Zarządzania. Obecnie pracuję na stanowisku protokolanta sądowego w Sądzie Apelacyjnym w Katowicach. W ostatnim czasie zainteresowałem się tematyką programowania, a po darmowym Livie YouCode zdecydowałem się rozpocząć do kursu Frontend Developera.
+          <p>
+            Mam 27 lat i pochodzę z małej, ale pięknej miejscowości Świerklaniec. Jestem absolwentem AWF Katowice, gdzie ukończyłem studia licencjckie z Bezpieczeństwa Wewnętrznego i studia magisterskie z Zarządzania. Po studiach zainteresowałem się tematyką programowania i rozpocząłem kurs Frontend Developera💻, na któym to po raz pierwszy poczułem, co chciałbym robić w życiu.
+          </p>
+          <p>
+            Moją wielką pasją jest piłka nożna⚽ - jestem aktywnym zawodnikiem lokalnej drużyny - Unia Świerklaniec🟨🟥 i wielkim fanem F.C. Barcelony🟥🟦. Przy dobrej pogodzie lubię też pojeździć na rolkach. Poza sportem, uwielbiam słuchać muzyki z gatunku <i>rocka</i> i <i>metalu</i>🎸. W wolnych chwilach lubie też trzymające w napięciu kino🎬, czy też książkę z gatunku <i>fantasy</i>📖.
+          </p>
         </>
       }
     />

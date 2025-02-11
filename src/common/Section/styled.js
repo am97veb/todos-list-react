@@ -13,7 +13,6 @@ export const SectionHeader = styled.h2`
 
 export const SectionBody = styled.div`
   padding: 20px;
-  text-align:justify;
 `;
 
 export const SectionContainer = styled.div`
