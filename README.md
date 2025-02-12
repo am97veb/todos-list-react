@@ -10,7 +10,7 @@ Below is the presentation, link to the application, used technologies and availa
 
 ## 🎬 Presentation
 
-![App presentation](TaskListGif.gif)
+![App presentation](TodoListGif.gif)
 
 ## 📄 Demo
 
@@ -21,6 +21,8 @@ https://am97veb.github.io/todos-list-react/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6. In addition, tools such as:
 
 - Redux,
+- Redux-Saga
+- React Router
 - Grid,
 - Styled Components,
 - ThemeProvider,
