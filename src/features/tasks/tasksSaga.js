@@ -12,8 +12,8 @@ function* fetchExampleTasksHandler() {
         yield put(switchTasks(exampleTasks));
         yield put(fetchStatusChange());
     } catch (error) {
-        yield call(alert, "Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później");
-        yield call(console.error("Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później", error));
+        yield call(alert, "Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później.");
+        yield call(console.error("Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później.", error));
     };
 };
 
