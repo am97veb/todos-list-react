@@ -1,1 +1,1 @@
-export const sourceApiData = ("todos-list-react/exampleTasks.json");
+export const sourceApiData = ("./todos-list-react/exampleTasks.json");
