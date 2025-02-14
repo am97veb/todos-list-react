@@ -19,7 +19,7 @@ export const ListItem = styled.li`
         display: none;
     `}
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.slim}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
         grid-template-columns: 30px 1fr 30px;
         grid-gap: 10px;
   }

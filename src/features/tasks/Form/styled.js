@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
     grid-template-columns: 1fr 150px;
     gap: 20px;
     
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
         grid-template-columns: 1fr;
     }
 `;
@@ -22,7 +22,7 @@ export const FormButton = styled.button`
         transform: scale(1.1);
     }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
         padding: 10px;
         margin-top: 0px;
     }

@@ -4,7 +4,7 @@ export const ButtonsWrapper = styled.div`
   display: flex;
   padding: 20px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -21,7 +21,7 @@ export const ExtraHeaderButtons = styled.button`
     color: ${({ theme }) => theme.colors.robinsEggBlue};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
     flex-basis: 100%;
     margin: 10px;
   }

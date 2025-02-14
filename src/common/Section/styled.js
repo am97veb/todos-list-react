@@ -21,7 +21,7 @@ export const SectionContainer = styled.div`
   align-items: center;
   border-bottom: solid 2px ${({ theme }) => theme.colors.alto};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
     grid-template-columns: 1fr;
   }
 `;

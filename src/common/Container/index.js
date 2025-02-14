@@ -5,7 +5,7 @@ export const Container = styled.main`
     margin: 0 auto;
     padding: 0 20px;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.slim}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.small}px) {
         padding: 0 10px;
     }
 `;
