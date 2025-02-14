@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const List = styled.ul`
     padding: 0px;
-    margin: 0px;
+    margin: 0px; 
 `;
 
 export const ListItem = styled.li`
@@ -18,6 +18,11 @@ export const ListItem = styled.li`
     ${({ hidden }) => hidden && css`
         display: none;
     `}
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.slim}px) {
+        grid-template-columns: 30px 1fr 30px;
+        grid-gap: 10px;
+  }
 `;
 
 export const ListButton = styled.button`
