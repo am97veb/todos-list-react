@@ -7,7 +7,12 @@ import store from "./store";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import { GlobalStyle } from "./globalStyle";
+import { saveTasksToLocalStorage } from './features/tasks/localStorageTasks';
 
+store.subscribe(() => {
+  const tasksTable = store.getState().tasks.tasks;
+  saveTasksToLocalStorage(tasksTable);
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

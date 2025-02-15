@@ -17,12 +17,12 @@ function* fetchExampleTasksHandler() {
     };
 };
 
-function* tasksFromLocaleStorageHandler() {
-    const tasks = yield select(selectTasks);
-    yield call(saveTasksToLocalStorage, tasks);
-};
+// function* tasksFromLocaleStorageHandler() {
+//     const tasks = yield select(selectTasks);
+//     yield call(saveTasksToLocalStorage, tasks);
+// };
 
 export function* watchFetchExampleTasks() {
     yield takeEvery(fetchExampleTasks.type, fetchExampleTasksHandler);
-    yield takeEvery("*", tasksFromLocaleStorageHandler);
+    // yield takeEvery("*", tasksFromLocaleStorageHandler);
 };
