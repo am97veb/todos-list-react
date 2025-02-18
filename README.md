@@ -3,8 +3,7 @@
 ## 📖 Description
 
 Hello! 
-I would like to present a simple task list application. This application is easy and intuitive. Just write in the field what you have to do and then press the “add task” button or “enter” on the keyboard. Below you will see the typed tasks. You can mark them as completed or uncompleted (green button) or delete them (red button). 
-There are also two additional buttons - the first shows the completed task and the second marks all tasks as completed.
+I would like to present a simple task list application. This application is easy and intuitive. Just write in the field what you have to do and then press the “add task” button or “enter” on the keyboard. You can download sample tasks via the button above. Below you will see the typed tasks. You can mark them as completed or uncompleted (green button) or delete them (red button). Once tasks have been added to the list, two additional buttons will appear - the first one hides the completed task and the second marks all tasks as completed. You can also filter the tasks by entering their content in the correspondingly marked field.
 
 Below is the presentation, link to the application, used technologies and available scripts.
 
@@ -21,8 +20,9 @@ https://am97veb.github.io/todos-list-react/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6. In addition, tools such as:
 
 - Redux,
-- Redux-Saga
-- React Router
+- Redux-Saga,
+- Redux Toolkit,
+- React Router,
 - Grid,
 - Styled Components,
 - ThemeProvider,
