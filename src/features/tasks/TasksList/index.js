@@ -3,6 +3,7 @@ import { List, ListItem, ListButton, Content, StyledLink } from "./styled";
 import { toggleDone, removeTask, selectHideDone } from "../tasksSlice";
 import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import { selectSearchTask } from "../tasksSlice";
+import { toTaskDetails } from "../../../routes";
 
 const TasksList = () => {
   const location = useLocation();
@@ -29,7 +30,7 @@ const TasksList = () => {
           <Content
             $done={task.done}>
             <StyledLink
-              to={`/zadania/${task.id}`}
+              to={toTaskDetails({ id: task.id })}
             >
               {task.content}
             </StyledLink>

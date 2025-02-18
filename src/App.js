@@ -3,22 +3,23 @@ import Navigation from "./common/Navigation";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskDetailsPage from "./features/tasks/TaskDetailsPage";
 import AuthorPage from "./features/author/index";
+import { toAuthor, toTaskDetails, toTasks } from "./routes";
 
 const App = () => (
   <HashRouter>
     <Navigation />
     <Switch>
-      <Route path="/zadania/:id">
+      <Route path={toTaskDetails()}>
         <TaskDetailsPage />
       </Route>
-      <Route path="/zadania">
+      <Route path={toTasks()}>
         <TasksPage />
       </Route>
-      <Route path="/autor">
+      <Route path={toAuthor()}>
         <AuthorPage />
       </Route>
       <Route path="/">
-        <Redirect to="/zadania" />
+        <Redirect to={toTasks()} />
       </Route>
     </Switch>
   </HashRouter>
