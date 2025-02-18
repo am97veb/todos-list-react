@@ -1,6 +1,6 @@
 import { NavigationContainer, NavigationList, StyledNavLink } from "./styled";
 
-export const Navigation = () => (
+const Navigation = () => (
   <NavigationContainer>
     <NavigationList>
       <li>
@@ -12,3 +12,5 @@ export const Navigation = () => (
     </NavigationList>
   </NavigationContainer>
 );
+
+export default Navigation;

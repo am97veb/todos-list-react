@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Container } from "../../../common/Container";
+import Container from "../../../common/Container";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
 import { useSelector } from "react-redux";
@@ -19,13 +19,13 @@ const TaskDetailsPage = () => {
           task ? task.content : "Wybacz, nie ma takiego zadania😕"
         }
         sectionBody={
-          task &&
+          task && (
           <>
             <strong>Ukończono:</strong>
             {" "}
             {task.done ? "Tak" : "Nie"}
           </>
-        }
+        )}
       />
     </Container>
   );

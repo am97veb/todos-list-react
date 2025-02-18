@@ -1,4 +1,4 @@
-import { Container } from "../../../common/Container";
+import Container from "../../../common/Container";
 import Form from "../Form";
 import TasksList from "../TasksList";
 import Header from "../../../common/Header";

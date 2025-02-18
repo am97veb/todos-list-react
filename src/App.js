@@ -1,5 +1,5 @@
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
-import { Navigation } from "./common/Navigation";
+import Navigation from "./common/Navigation";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskDetailsPage from "./features/tasks/TaskDetailsPage";
 import AuthorPage from "./features/author/index";
