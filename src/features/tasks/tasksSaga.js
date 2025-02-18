@@ -1,19 +1,17 @@
 import { call, put, delay, takeEvery, select } from "redux-saga/effects"
-import { fetchExampleTasks, fetchStatusChange, switchTasks } from "./tasksSlice";
+import { fetchExampleTasks, fetchExampleTasksError, fetchExampleTasksSucces } from "./tasksSlice";
 import { fetchApiData } from "./fetchApiData";
 import { saveTasksToLocalStorage } from "./localStorageTasks";
 import { selectTasks } from "./tasksSlice.js";
 
 function* fetchExampleTasksHandler() {
     try {
-        yield put(fetchStatusChange());
         yield delay(3000);
         const exampleTasks = yield call(fetchApiData);
-        yield put(switchTasks(exampleTasks));
-        yield put(fetchStatusChange());
+        yield put(fetchExampleTasksSucces(exampleTasks));
     } catch (error) {
+        yield put(fetchExampleTasksError())
         yield call(alert, "Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później.");
-        yield call(console.error("Niestety nie udało się pobrać zadań. Przeładuj stronę lub spróbuj później.", error));
     };
 };
 
