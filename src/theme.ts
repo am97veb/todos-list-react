@@ -17,4 +17,4 @@ export const theme = {
     medium: 768,
     small: 576,
   },
-}
+} as const;
