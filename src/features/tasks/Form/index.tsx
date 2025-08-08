@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, FormEventHandler } from "react";
 import { StyledForm, FormButton } from "./styled";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
@@ -7,10 +7,10 @@ import { Input } from "../Input";
 
 const Form = () => {
   const [newTask, setTask] = useState("");
-  const focusRef = useRef(null);
+  const focusRef = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
 
-  const onFormSubmit = (event) => {
+  const onFormSubmit: FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
 
     const trimmedNewTask = newTask.trim();
@@ -36,7 +36,7 @@ const Form = () => {
         onChange={(event) => setTask(event.target.value)}
       />
       <FormButton
-        onClick={() => focusRef.current.focus()}
+        onClick={() => focusRef.current!.focus()}
       >
         Dodaj zadanie
       </FormButton>

@@ -1,9 +1,9 @@
-import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory, useLocation } from "react-router-dom";
 
-export const useSearchParameter = (searchQueryParamName) => {
+export const useSearchParameter = (searchQueryParamName: string) => {
     const location = useLocation();
     const search = new URLSearchParams(location.search).get(searchQueryParamName);
-
+   
     return search;
 };
 
@@ -12,7 +12,7 @@ export const useReplaceSearchParameter = () => {
     const location = useLocation();
     const searchContent = new URLSearchParams(location.search);
 
-    const replaceSearchParameter = ({ key, value }) => {
+    const replaceSearchParameter = ( key: string, value: string ) => {
         if (value === undefined) {
             searchContent.delete(key);
         } else {
