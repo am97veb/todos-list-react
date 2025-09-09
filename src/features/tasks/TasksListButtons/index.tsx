@@ -1,16 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
 import { toggleHideDone, allTasksDone, selectHideDone, selectEveryTaskDone, selectSomeTaskDone, selectAreTasksEmpty } from "../tasksSlice";
 import { ButtonsWrapper, ExtraHeaderButtons, ExtraHeaderButtonsDisabled } from "../ExtraHeaderButtons";
+import { useAppDispatch, useAppSelector } from "../../../core/hooks";
 
 const TasksListButtons = () => {
-  const hideDone = useSelector(selectHideDone);
-  const everyTaskDone = useSelector(selectEveryTaskDone);
-  const someTaskDone = useSelector(selectSomeTaskDone);
-  const areTaskEmpty = useSelector(selectAreTasksEmpty);
-  const dispatch = useDispatch();
+  const hideDone = useAppSelector(selectHideDone);
+  const everyTaskDone = useAppSelector(selectEveryTaskDone);
+  const someTaskDone = useAppSelector(selectSomeTaskDone);
+  const areTaskEmpty = useAppSelector(selectAreTasksEmpty);
+  const dispatch = useAppDispatch();
 
-  return (
-    areTaskEmpty || (
+  return areTaskEmpty ? null : (
       <ButtonsWrapper>
         <ExtraHeaderButtons
           onClick={() => dispatch(toggleHideDone())}
@@ -25,8 +24,7 @@ const TasksListButtons = () => {
           Ukończ wszystkie
         </ExtraHeaderButtonsDisabled>
       </ButtonsWrapper>
-    )
-  );
+    );
 };
 
 export default TasksListButtons;

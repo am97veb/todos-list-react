@@ -3,18 +3,19 @@ import { List, ListItem, ListButton, Content, StyledLink } from "./styled";
 import { toggleDone, removeTask, selectHideDone } from "../tasksSlice";
 import { useLocation } from "react-router-dom";
 import { selectSearchTask } from "../tasksSlice";
-import { toTaskDetails } from "../../../routes";
+import { toTaskDetails } from "../../../core/routes";
 import { searchTasksParamName } from "../searchTasksParamName";
 import { Task } from "../types";
+import { useAppDispatch, useAppSelector } from "../../../core/hooks";
 
 const TasksList = () => {
   const location = useLocation();
   const searchContent = new URLSearchParams(location.search);
-  const search = searchContent.get(searchTasksParamName);
+  const search: string | null = searchContent.get(searchTasksParamName);
 
-  const tasks = useSelector(state => selectSearchTask(state, search));
-  const hideDone = useSelector(selectHideDone);
-  const dispatch = useDispatch();
+  const tasks = useAppSelector(state => selectSearchTask(state, search || ""));
+  const hideDone = useAppSelector(selectHideDone);
+  const dispatch = useAppDispatch();
 
   return (
     <List>

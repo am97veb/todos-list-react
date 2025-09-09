@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import Container from "../../../common/Container";
 import Header from "../../../common/Header";
 import Section from "../../../common/Section";
-import { useSelector } from "react-redux";
 import { selectTaskById } from "../tasksSlice";
+import { useAppSelector } from "../../../core/hooks";
 
 const TaskDetailsPage = () => {
   const { id } = useParams<{id: string}>();
-  const task = useSelector(state => selectTaskById(state, id));
+  const task = useAppSelector(state => selectTaskById(state, id));
 
   return (
     <Container>
