@@ -1,8 +1,4 @@
-import { ReactNode } from "react";
-
-interface HeaderProps {
-  title: ReactNode;
-}
+import HeaderProps from "./types";
 
 const Header = ({ title }: HeaderProps) => (
   <header>

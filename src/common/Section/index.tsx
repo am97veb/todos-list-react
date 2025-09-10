@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
 import { Wrapper, SectionContainer, SectionHeader, SectionBody } from "./styled";
-
-interface SectionProps {
-  title: ReactNode;
-  sectionBody: ReactNode;
-  extraHeaderButtons?: ReactNode;
-}
+import SectionProps from "./types";
 
 const Section = ({ title, sectionBody, extraHeaderButtons }: SectionProps) => (
   <Wrapper>
