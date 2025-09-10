@@ -9,7 +9,7 @@ Below is the presentation, link to the application, used technologies and availa
 
 ## 🎬 Presentation
 
-![App presentation](TodoListGif.gif)
+![App presentation](./README%20files/TodoListGif.gif)
 
 ## 📄 Demo
 
