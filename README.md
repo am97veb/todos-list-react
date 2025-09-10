@@ -19,6 +19,7 @@ https://am97veb.github.io/todos-list-react/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses technologies implemented in Java Script ECMAScript 6. In addition, tools such as:
 
+- TypeScript,
 - Redux,
 - Redux-Saga,
 - Redux Toolkit,
@@ -29,6 +30,77 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Media Queries,
 - Normalize.css,
 - BEM convention.
+
+## Files Structure
+```
+public/
+src/
+├── common/
+│   ├── Container/ 
+│   │   └── index.tsx
+│   ├── Header/
+│   │   ├── index.tsx
+│   │   └── types.ts
+│   └── Section/
+│       ├── index.tsx
+|       ├── styed.ts
+│       └── types.ts
+│
+├── core/
+│   ├── App/
+│   │   ├── Navigation/
+|   |   |   ├── index.tsx
+│   │   │   └── styled.ts
+│   │   └── App.tsx
+│   ├── GlobalStyles.ts
+│   ├── hooks.ts
+│   ├── routes.ts
+│   ├── store.ts
+│   ├── styled.d.ts
+│   └── theme.ts
+│
+├── features/
+│   ├── author/
+│   │   └── index.tsx
+│   └── tasks/
+│       ├── ExampleTaskButton/
+│       │   └── index.tsx
+│       ├── ExtraHeaderButtons/
+│       │   └── index.tsx
+│       ├── FilterTasks/
+│       │   ├── index.tsx
+│       │   ├── styles.ts
+│       |   └── useFilterParameters.tsx
+│       ├── Form/
+│       │   ├── index.tsx
+│       │   └── styles.ts
+│       ├── Input/
+│       │   └── index.tsx
+│       ├── TaskDetailsPage/
+│       │   └── index.tsx
+│       ├── TaskList/
+│       │   ├── index.tsx
+│       │   └── styles.ts
+│       ├── TaskListButtons/
+│       │   └── index.tsx
+│       ├── TaskPage/
+│       │   └── index.tsx
+│       ├── fetchApiData.tsx
+│       ├── localStorageTasks.tsx
+│       ├── searchTaskParamName.ts
+│       ├── sourceApiDetails.ts
+│       ├── tasksSaga.tsx
+│       ├── tasksSlice.tsx
+│       └── types.ts
+│
+├── index.tsx
+└── reportWebVitals.js
+.gitignore
+package-lock.json
+package.json
+README.md
+tsconfig.json
+```
     
 ## 📃 Available Scripts
 
